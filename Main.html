@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/boot.register')
+            .then(null, console.error.bind(console));
+    </script>
+    <meta charset="UTF-8">
+
+    <link rel="shortcut icon" href="/resourses/spiral_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.styles.css" type="text/css">
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+
+
+            background-image: url("./resourses/background.png");
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+
+    <title>Spiral</title>
+</head>
+
+
+<body>
+<div class="cover">
+
+        <tabs class="tabbase">
+            <tab tabTitle="Tab 1">
+                Here's some content.
+            </tab>
+            <tab tabTitle="Tab 2">
+                And here's more in another tab.
+            </tab>
+        </tabs>
+
+</div>
+</body>
+</html>
+
+
